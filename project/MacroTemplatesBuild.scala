@@ -6,7 +6,10 @@ object MacroTemplatesBuild extends Build {
   val baseSettings = Seq(
     scalacOptions ++= Seq("-feature", "-Xlint", "-deprecation", "-unchecked"),
     scalaVersion := "2.10.2",
-    resolvers += Resolver.sonatypeRepo("snapshots")
+    resolvers ++= Seq(
+      Resolver.sonatypeRepo("snapshots"),
+      "Typesafe repository" at "http://repo.typesafe.com/typesafe/releases/"
+    )
   )
 
   lazy val sample = play.Project("sample") settings (baseSettings: _*) dependsOn macroTemplates
