@@ -1,0 +1,23 @@
+@()(implicit menu: navigation.Menu)
+
+@defining("Using Scala macros to dynamically call Play! templates") { title =>
+
+    @layout(title) {
+
+        <h1>@title</h1>
+
+        <p>This Web site demonstrates the utilization of Scala macros to dynamically call Play! templates. The pages you see are rendered using a template that is dynamically chosen according to the request URL path. In the same way, the navigation menu is dynamically generated from the list of pages.</p>
+
+        <p>The code of this experiment is available on <a href="http://github.com/julienrf/play-macro-templates">GitHub</a>. If you want to try it, just clone the repository:</p>
+
+        <pre><code>$ git clone git@@github.com:julienrf/play-macro-templates.git</code></pre>
+
+        <p>And run the application:</p>
+
+        <pre><code>$ cd play-macro-templates; sbt run</code></pre>
+
+        <p>If you are curious, feel free to explore the pages explaining <a href="@routes.Application.page("overview")">the page rendering mechanism</a> and <a href="@routes.Application.page("menu")">the menu construction mechanism</a>.</p>
+
+    }
+
+}

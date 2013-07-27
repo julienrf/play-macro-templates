@@ -1,0 +1,15 @@
+@()(implicit ctx: PageContext)
+
+@page {
+
+    <p>The current system suffers from some limitations. For example, if you want to refer to a page from another page, you have to write its path as a <code>String</code> (which is not a safe practice):</p>
+
+    <pre><code>See &lt;a href="@@routes.Application.page("somePagePath")"&gt;this page&lt;/a&gt;.</code></pre>
+
+    <p>We could solve this problem by improving the macro to make it generate not just a map of pages but a value which members contain the paths of the pages, so we would be able to write the following code instead:</p>
+
+    <pre><code>See &lt;a href="@@routes.Application.page(pages.somePagePath)"&gt;this page&lt;/a&gt;.</code></pre>
+
+    <p>However, synthesizing anonymous types using macros is not currently well supported by Scala macros (though it is perfectly possible by relying on some tricks).</p>
+
+}

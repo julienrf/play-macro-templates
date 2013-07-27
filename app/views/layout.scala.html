@@ -1,0 +1,26 @@
+@(title: String, activeItem: Option[navigation.Item] = None)(content: Html)(implicit menu: navigation.Menu)
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>@title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css" />
+    </head>
+    <body class="container">
+        <header class="navbar">
+            <a class="navbar-brand" href="@routes.Application.index">Home</a>
+            <ul class="nav navbar-nav">
+                @for(item <- menu.items) {
+                  <li @if(activeItem.exists(_ == item)) { class=active }><a href="@routes.Application.page(item.path)">@item.title</a></li>
+                }
+            </ul>
+        </header>
+        <article>
+            @content
+        </article>
+        <footer>
+            <p style="text-align: center; font-size: smaller;">© <a href="mailto:julien@@richard-foy.fr">Julien Richard-Foy</a></p>
+        </footer>
+    </body>
+</html>
