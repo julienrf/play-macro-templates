@@ -1,4 +1,4 @@
 Using Scala macros to dynamically call Play! templates
 ======================================================
 
-See [http://play-macro-templates.herokuapp.com/](play-macro-templates.herokuapp.com) for more information.
+See [app-ae09684d-45e4-4e3e-aa10-5ca9c46fce23.cleverapps.io](http://app-ae09684d-45e4-4e3e-aa10-5ca9c46fce23.cleverapps.io/) for more information.
