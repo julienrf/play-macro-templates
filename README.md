@@ -11,4 +11,4 @@ $ cd play-macro-templates
 $ sbt run
 ```
 
-You will be able to navigate through a Web site describing its own architecture. If you are curious, the different pages are defined [here](/julienrf/play-macro-templates/tree/master/app/views/pages).
+You will be able to navigate through a Web site describing its own architecture. If you are curious, the different pages are defined [here](/app/views/pages).
